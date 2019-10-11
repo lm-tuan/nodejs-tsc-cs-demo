@@ -18,13 +18,18 @@
     "coverage:all": "nyc --all npm run test"
   },
   "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/mongodb": "^3.3.6",
     "awilix": "^4.2.1",
     "aws-lambda": "^0.1.2",
     "aws-serverless-express": "^3.3.5",
+    "dotenv": "^8.1.0",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.3",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
@@ -37,6 +42,7 @@
     "@types/jsonwebtoken": "^8.3.2",
     "@types/lodash": "^4.14.122",
     "@types/moment": "^2.13.0",
+    "@types/mongoose": "^5.5.19",
     "@types/morgan": "^1.7.35",
     "chai": "^4.1.2",
     "cucumber": "^5.1.0",

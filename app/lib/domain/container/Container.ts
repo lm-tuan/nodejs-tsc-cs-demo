@@ -1,5 +1,4 @@
 
-
 export interface IContainer {
   resolve<T>(name: string): T
 }
@@ -12,4 +11,4 @@ export function setSharedContainer(container: IContainer): void {
 
 export function resolve<T>(name: string): T {
   return sharedContainer.resolve(name)
-} 
+}

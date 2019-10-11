@@ -7,6 +7,8 @@ export const router = Router()
 
 router.post('/authenticate', async (request: Request, response: Response) => {
   const { email, password } = request.body
+  //console.log(email, password);
+
   const controller = resolve<AuthController>("authController")
   response.sendPromise(controller.authenticate(email, password))
 })

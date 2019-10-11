@@ -1,8 +1,7 @@
 import { router as authRouter } from './AuthRouter';
-
+import { router as registerRouter } from './RegisterRouter';
 // tslint:disable-next-line: export-name
 export const routers = [
-  // TODO - Declare other routers here, the order are matter in case
-  // there are URL overridden
-  authRouter
+  authRouter,
+  registerRouter,
 ]

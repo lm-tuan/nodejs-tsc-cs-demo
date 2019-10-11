@@ -30,4 +30,5 @@ export default class AuthController {
   public async resolveToken(token: string): Promise<User | Problem> {
     return this.resolveTokenUC.execute(token)
   }
+
 }

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    //"noUnusedLocals": false,
     "module": "commonjs",
     "noImplicitAny": true,
     "removeComments": true,

@@ -5,8 +5,8 @@ import { IUserRepository } from "../../repositories/IUserRepository";
 import { IJwtProvider } from "../../security/IJwtProvider";
 
 export default class Authenticate {
-  private readonly userRepository: IUserRepository
-  private readonly jwtProvider: IJwtProvider
+  private readonly userRepository: IUserRepository // get data to 
+  private readonly jwtProvider: IJwtProvider // error provider token
 
   constructor(
     userRepository: IUserRepository,
@@ -30,7 +30,7 @@ export default class Authenticate {
     }
 
     return this.jwtProvider.generateToken({
-      id: user.id
+      id: JSON.stringify(user.id)
     })
   }
 }

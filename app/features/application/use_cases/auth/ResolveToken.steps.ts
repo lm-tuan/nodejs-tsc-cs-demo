@@ -13,7 +13,7 @@ let mockedParseTokenResult: TokenPayload | Problem = new ForbiddenProblem
 let mockedUser: User
 
 Given('valid token', () => {
-  mockedParseTokenResult = { id: 'any' }
+  mockedParseTokenResult = { id: 'anyid' }
 })
 
 Given('token could not be resolved to a user', () => {
@@ -21,7 +21,7 @@ Given('token could not be resolved to a user', () => {
 })
 
 Given('token resolved to an existing user', () => {
-  mockedUser = new User({ id: 'anyid' })
+  mockedUser = new User({ _id: 'anyid' })
 })
 
 When('resolve token {string}', async (token: string) => {
