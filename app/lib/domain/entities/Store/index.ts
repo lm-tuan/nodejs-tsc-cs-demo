@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import Mail from '../../../../services/mail';
 import UserModelfrom from './model';
 
 
@@ -7,12 +8,16 @@ export class UserRepository {
 
     public addNewUser(req: Request, res: Response) {
         let newUser = new UserModelfrom(req.body);
-
-        newUser.save((err, contact) => {
+        Mail.to = req.body.email;
+        Mail.subject = 'Subject of your email';
+        Mail.message = '<p>Your html here</p>';
+        let result = Mail.sendMail();
+        console.log(result);
+        newUser.save((err, user) => {
             if (err) {
                 res.send(err);
             }
-            res.json(contact);
+            res.json({ userId: user._id, message: 'register suceess' });
         });
     }
 
